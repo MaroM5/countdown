@@ -1,4 +1,3 @@
-// Function to calculate time difference
 function getTimeRemaining(endtime) {
     const total = Date.parse(endtime) - Date.parse(new Date());
     const seconds = Math.floor((total / 1000) % 60);
@@ -14,7 +13,6 @@ function getTimeRemaining(endtime) {
     };
 }
 
-// Function to initialize the countdown
 function initializeClock(endtime) {
     function updateClock() {
         const t = getTimeRemaining(endtime);
@@ -22,7 +20,7 @@ function initializeClock(endtime) {
 
         if (t.total <= 0) {
             clearInterval(timeinterval);
-            // Show confetti
+            
             confetti.start();
         }
     }
@@ -31,12 +29,12 @@ function initializeClock(endtime) {
     const timeinterval = setInterval(updateClock, 1000);
 }
 
-// Change background color and set daily image
+
 function setBackgroundAndImage(endtime) {
-    // Calculate the remaining days until the deadline
+   
     const remainingDays = Math.ceil((endtime - new Date()) / (1000 * 60 * 60 * 24));
 
-    const colors = ['#30D5C8', '#c72418', '#1829c7', '#8118c7', '#c73e18', '#18a7c7', '#600e6b', '#6b0e0e', '#d13f3f', '#a83fd1', '#76999c', '#b3a33b', '#7d240b', '#0b247d', '#427d1e', '#a3364f', '#364ea3']; // Array of colors
+    const colors = ['#30D5C8', '#c72418', '#1829c7', '#8118c7', '#c73e18', '#18a7c7', '#600e6b', '#6b0e0e', '#d13f3f', '#a83fd1', '#76999c', '#b3a33b', '#7d240b', '#0b247d', '#427d1e', '#a3364f', '#364ea3']; 
     const images = [
         ['Day17.jpg],
         ['Day16.jpg'],
@@ -55,17 +53,16 @@ function setBackgroundAndImage(endtime) {
         ['Day03.jpg'],
         ['Day02.jpg'],
         ['Day01_06.jpg', 'Day01_05.jpg', 'Day01_04.jpg', 'Day01_03.jpg', 'Day01_02.jpg', 'Day01_01.jpg']
-    ]; // Array of image paths
-
-    document.body.style.backgroundColor = colors[remainingDays % colors.length]; // Set background color
-    document.getElementById('daily-image').src = images[remainingDays % images.length][0]; // Set daily image (using the first image in the array)
+    ]; 
+    document.body.style.backgroundColor = colors[remainingDays % colors.length]; 
+    document.getElementById('daily-image').src = images[remainingDays % images.length][0];
 }
 
-// Main function to start the countdown and set background color/image
+
 function initialize() {
-    const deadline = new Date("April 6, 2024 07:40:00 GMT+0300"); // Greek time
+    const deadline = new Date("April 6, 2024 07:40:00 GMT+0300"); 
     initializeClock(deadline);
     setBackgroundAndImage(deadline);
 }
 
-initialize(); // Call the initialize function
+initialize(); 
