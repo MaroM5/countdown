@@ -7,6 +7,10 @@ body {
 .countdown-container {
     margin-top: 20%;
 }
+.day-countdown {
+    font-size: 2em;
+    margin-bottom: 20px; 
+}
 .countdown {
     font-size: 3em; 
     display: inline-block;
