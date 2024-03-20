@@ -38,6 +38,7 @@ function setBackgroundAndImage(endtime) {
 
     const colors = ['#30D5C8', '#c72418', '#1829c7', '#8118c7', '#c73e18', '#18a7c7', '#600e6b', '#6b0e0e', '#d13f3f', '#a83fd1', '#76999c', '#b3a33b', '#7d240b', '#0b247d', '#427d1e', '#a3364f', '#364ea3']; // Array of colors
     const images = [
+        ['Day17.jpg],
         ['Day16.jpg'],
         ['Day15_02.jpg', 'Day15.jpg'],
         ['Day14.jpg'],
@@ -62,7 +63,7 @@ function setBackgroundAndImage(endtime) {
 
 // Main function to start the countdown and set background color/image
 function initialize() {
-    const deadline = new Date("April 5, 2024 07:40:00 GMT+0300"); // Greek time
+    const deadline = new Date("April 6, 2024 07:40:00 GMT+0300"); // Greek time
     initializeClock(deadline);
     setBackgroundAndImage(deadline);
 }
