@@ -16,7 +16,12 @@ function getTimeRemaining(endtime) {
 function initializeClock(endtime) {
     function updateClock() {
         const t = getTimeRemaining(endtime);
-        document.getElementById('countdown').innerHTML = `${t.days}d ${t.hours}h ${t.minutes}m ${t.seconds}s`;
+        const dayCountdown = document.getElementById('day-countdown');
+        dayCountdown.textContent = `Days: ${t.days + 1}`; // +1 because we're counting the current day as well
+        const fullCountdown = document.getElementById('full-countdown');
+        fullCountdown.textContent = `${t.days}d ${t.hours}h ${t.minutes}m ${t.seconds}s`;
+        const exactCountdown = document.getElementById('exact-countdown');
+        exactCountdown.textContent = `Exact countdown: ${t.days}d ${t.hours}h ${t.minutes}m ${t.seconds}s`;
 
         if (t.total <= 0) {
             clearInterval(timeinterval);
@@ -51,7 +56,6 @@ function setBackgroundAndImage(endtime) {
         ['Day02.jpg'],
         ['Day01_06.jpg', 'Day01_05.jpg', 'Day01_04.jpg', 'Day01_03.jpg', 'Day01_02.jpg', 'Day01_01.jpg']
     ]; 
-
     document.body.style.backgroundColor = colors[remainingDays % colors.length]; 
     document.getElementById('daily-image').src = images[remainingDays % images.length][0];
 }
@@ -62,4 +66,4 @@ function initialize() {
     setBackgroundAndImage(deadline);
 }
 
-initialize(); 
+initialize();
