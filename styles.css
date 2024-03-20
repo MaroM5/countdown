@@ -1,13 +1,19 @@
 body {
     font-family: Arial, sans-serif;
     text-align: center;
-    background-color: #f0f0f0; /* Initial background color */
+    background-color: #f0f0f0; 
 }
 
 .countdown-container {
     margin-top: 20%;
 }
-
+.countdown {
+    font-size: 3em; 
+    display: inline-block;
+    padding: 10px 20px; 
+    border: 2px solid white; 
+    border-radius: 5px; 
+}
 #confetti-canvas {
     position: fixed;
     top: 0;
