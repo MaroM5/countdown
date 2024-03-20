@@ -19,7 +19,7 @@ function initializeClock(endtime) {
         const dayCountdown = document.getElementById('day-countdown');
         dayCountdown.textContent = `Days: ${t.days + 1}`; // +1 because we're counting the current day as well
         const fullCountdown = document.getElementById('full-countdown');
-        fullCountdown.textContent = `Exact countdown: ${t.days}d ${t.hours}h ${t.minutes}m ${t.seconds}s`;
+        fullCountdown.textContent = `Exact countdown:\n ${t.days}d ${t.hours}h ${t.minutes}m ${t.seconds}s`;
 
         if (t.total <= 0) {
             clearInterval(timeinterval);
