@@ -39,7 +39,7 @@ function setBackgroundAndImage(endtime) {
     // Calculate the day of the countdown
     const dayOfCountdown = Math.max(0, 16 - daysUntilDeadline); // Adjust 16 to the total number of days in the countdown
 
-    const colors = ['#30D5C8', '#c72418', '#1829c7', '#8118c7', '#c73e18', '#18a7c7', '#600e6b', '#6b0e0e', '#d13f3f', '#a83fd1', '#76999c', '#b3a33b', '#7d240b', '#0b247d', '#427d1e', '#a3364f', '#364ea3']; 
+    const colors = [ '#c72418', '#1829c7', '#8118c7', '#c73e18', '#18a7c7', '#600e6b', '#6b0e0e', '#d13f3f', '#a83fd1', '#76999c', '#b3a33b', '#7d240b', '#0b247d', '#427d1e', '#a3364f', '#364ea3']; 
     const images = [
         'Day16.jpg',
         'Day15_02.jpg',
