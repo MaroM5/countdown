@@ -31,8 +31,10 @@ function initializeClock(endtime) {
     const timeinterval = setInterval(updateClock, 1000);
 }
 
+
 function setBackgroundAndImage(endtime) {
     const remainingDays = Math.ceil((endtime - new Date()) / (1000 * 60 * 60 * 24));
+    console.log("Remaining days:", remainingDays); // Debug output
 
     const colors = ['#30D5C8', '#c72418', '#1829c7', '#8118c7', '#c73e18', '#18a7c7', '#600e6b', '#6b0e0e', '#d13f3f', '#a83fd1', '#76999c', '#b3a33b', '#7d240b', '#0b247d', '#427d1e', '#a3364f', '#364ea3']; 
     const images = [
