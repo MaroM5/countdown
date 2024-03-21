@@ -79,7 +79,7 @@ const images = {
     13: ['Day13.jpg'],
     14: ['Day14.jpg'],
     15: ['Day15.jpg', 'Day15_02.jpg'],
-    16: ['Day16.jpg'],
+    16: ['Day16.jpg']
     // Add more days as needed
 };
 
