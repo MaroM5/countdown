@@ -17,10 +17,11 @@ function initializeClock(endtime) {
     function updateClock() {
         const t = getTimeRemaining(endtime);
         const countdownElement = document.getElementById('countdown');
-        countdownElement.textContent = `${t.days}d ${t.hours}h ${t.minutes}m ${t.seconds}s`;
+        countdownElement.innerHTML = `${t.days}d ${t.hours}h ${t.minutes}m ${t.seconds}s`;
 
         if (t.total <= 0) {
             clearInterval(timeinterval);
+            countdownElement.innerHTML = "Countdown ended";
         }
     }
 
