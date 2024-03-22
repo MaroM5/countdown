@@ -1,8 +1,7 @@
 body {
     font-family: Arial, sans-serif;
     text-align: center;
-    background-color: #000000; 
-    transition: background-color 1s ease; 
+    background-color: #f0f0f0; 
 }
 
 .countdown-container {
