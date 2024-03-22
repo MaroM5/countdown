@@ -19,6 +19,11 @@ function initializeClock(endtime) {
         const countdownElement = document.getElementById('countdown');
         countdownElement.innerHTML = `${t.days}d ${t.hours}h ${t.minutes}m ${t.seconds}s`;
 
+        // Change background color based on minutes remaining
+        const colors = ['#30D5C8', '#c72418', '#1829c7', '#8118c7', '#c73e18', '#18a7c7', '#600e6b', '#6b0e0e', '#d13f3f', '#a83fd1', '#76999c', '#b3a33b', '#7d240b', '#0b247d', '#427d1e', '#a3364f', '#364ea3']; 
+        const colorIndex = Math.min(t.minutes, colors.length - 1); // Ensure color index is within the range
+        document.body.style.backgroundColor = colors[colorIndex];
+
         if (t.total <= 0) {
             clearInterval(timeinterval);
             countdownElement.innerHTML = "Countdown ended";
@@ -26,7 +31,7 @@ function initializeClock(endtime) {
     }
 
     updateClock();
-    const timeinterval = setInterval(updateClock, 1000);
+    const timeinterval = setInterval(updateClock, 60000); // Update clock every minute
 }
 
 function initialize() {
