@@ -30,7 +30,7 @@ function initializeClock(endtime) {
 }
 
 function initialize() {
-    const deadline = new Date("0"); //"Month XX, XXXX xx:xx:xx GMT+0300"
+    const deadline = new Date("December 21, 2024 00:00:00 GMT+0300"); //"Month XX, XXXX xx:xx:xx GMT+0300"
     initializeClock(deadline);
 }
 
