@@ -13,3 +13,9 @@ body {
     color: #333;
     font-weight: bold;
 }
+
+p {
+    font-size: 0.05em;
+					color: #333;
+    text-align: center;
+} 
