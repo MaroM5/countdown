@@ -35,7 +35,7 @@ function initializeClock(endtime) {
 
 
 function initialize() {
-    const deadline = new Date("May 01, 2025 22:51:50 GMT+0300");
+    const deadline = new Date("July 02, 2025 22:51:50 GMT+0300");
     initializeClock(deadline);
 }
 
