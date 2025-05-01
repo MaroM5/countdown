@@ -14,14 +14,18 @@ function getTimeRemaining(endtime) {
 }
 
 function initializeClock(endtime) {
+    const countdownElement = document.getElementById('countdown');
+    const messageElement = document.getElementById('message');
+
     function updateClock() {
         const t = getTimeRemaining(endtime);
-        const countdownElement = document.getElementById('countdown');
-        countdownElement.innerHTML = `${t.days}d ${t.hours}h ${t.minutes}m ${t.seconds}s`;
 
         if (t.total <= 0) {
             clearInterval(timeinterval);
-            countdownElement.innerHTML = "Countdown ended";
+            countdownElement.style.display = 'none';
+            messageElement.style.display = 'block'; 
+        } else {
+            countdownElement.innerHTML = `${t.days}d ${t.hours}h ${t.minutes}m ${t.seconds}s`;
         }
     }
 
@@ -29,8 +33,9 @@ function initializeClock(endtime) {
     const timeinterval = setInterval(updateClock, 1000);
 }
 
+
 function initialize() {
-    const deadline = new Date("July 02, 2025 18:00:00 GMT+0300"); //"Month XX, XXXX xx:xx:xx GMT+0300"
+    const deadline = new Date("May 01, 2025 22:51:50 GMT+0300");
     initializeClock(deadline);
 }
 
