@@ -2,6 +2,7 @@ body {
     font-family: Arial, sans-serif;
     text-align: center;
     background-color: #3064cf; 
+    color: #333;
 }
 
 .countdown-container {
@@ -10,8 +11,25 @@ body {
 
 #countdown {
     font-size: 3em;
-    color: #333;
     font-weight: bold;
+}
+
+.message_1 {
+    margin-top: 20px;
+    font-size: 2em;
+    font-weight: bold;
+    color: #333;
+}
+
+.message_2 {
+    margin-top: 20px;
+    font-size: 1em;
+    font-weight: bold;
+    color: #333;
+}
+
+.hidden {
+    display: none;
 }
 
 /*p {
@@ -20,10 +38,3 @@ body {
     text-align: center;
     font-weight: bold;
 } */
-
-#message {
-    margin-top: 20px;
-    font-size: 2em;
-    font-weight: bold;
-    color: #333;
-}
