@@ -4,26 +4,20 @@ function getTimeRemaining(endtime) {
     const minutes = Math.floor((total / 1000 / 60) % 60);
     const hours = Math.floor((total / (1000 * 60 * 60)) % 24);
     const days = Math.floor(total / (1000 * 60 * 60 * 24));
-    return {
-        total,
-        days,
-        hours,
-        minutes,
-        seconds
-    };
+    return { total, days, hours, minutes, seconds };
 }
 
 function initializeClock(endtime) {
     const countdownElement = document.getElementById('countdown');
-    const messageElement = document.getElementById('message');
+    const finalMessage = document.getElementById('final-message');
 
     function updateClock() {
         const t = getTimeRemaining(endtime);
 
         if (t.total <= 0) {
-            clearInterval(timeinterval);
             countdownElement.style.display = 'none';
-            messageElement.style.display = 'block'; 
+            finalMessage.classList.remove('hidden');
+            clearInterval(timeinterval);
         } else {
             countdownElement.innerHTML = `${t.days}d ${t.hours}h ${t.minutes}m ${t.seconds}s`;
         }
@@ -31,12 +25,12 @@ function initializeClock(endtime) {
 
     updateClock();
     const timeinterval = setInterval(updateClock, 1000);
+
+    document.addEventListener('visibilitychange', () => {
+        if (!document.hidden) updateClock();
+    });
 }
 
-
-function initialize() {
-    const deadline = new Date("July 02, 2025 22:51:50 GMT+0300");
-    initializeClock(deadline);
-}
-
-initialize();
+const deadline = new Date("July 02, 2025 22:51:50 GMT+0300"); 
+//new Date format("Month XX, XXXX XX:XX:XX GMT+0300")
+initializeClock(deadline);
