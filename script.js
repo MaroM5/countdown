@@ -17,6 +17,7 @@ function initializeClock(endtime) {
         if (t.total <= 0) {
             countdownElement.style.display = 'none';
             finalMessage.classList.remove('hidden');
+            confetti();
             clearInterval(timeinterval);
         } else {
             countdownElement.innerHTML = `${t.days}d ${t.hours}h ${t.minutes}m ${t.seconds}s`;
