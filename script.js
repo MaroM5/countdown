@@ -32,6 +32,6 @@ function initializeClock(endtime) {
     });
 }
 
-const deadline = new Date("December 20, 2025 18:00:00 GMT+0300"); 
+const deadline = new Date("December 18, 2025 23:00:00 GMT+0300"); 
 //new Date format("Month XX, XXXX XX:XX:XX GMT+0300")
 initializeClock(deadline);
