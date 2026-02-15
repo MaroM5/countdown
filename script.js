@@ -32,6 +32,6 @@ function initializeClock(endtime) {
     });
 }
 
-const deadline = new Date("February 05, 2026 22:30:00 GMT+0300"); 
+const deadline = new Date("April 05, 2026 16:30:00 GMT+0300"); 
 //new Date format("Month XX, XXXX XX:XX:XX GMT+0300")
 initializeClock(deadline);
